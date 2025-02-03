@@ -16,3 +16,9 @@ function agregarAmigo() {
 
     }
 }
+function actualizarListaAmigos() {//actualiza la lista de amigos
+    listaAmigos.innerHTML = "";//limpia la lista de amigos
+    nombres.forEach((nombre) => {
+        listaAmigos.innerHTML += `<li>${nombre}</li>`;//agrega un li por cada nombre en el array nombres
+    });
+}
