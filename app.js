@@ -33,3 +33,9 @@ function sortearAmigo() {//sortea un amigo secreto
         alert('Debes ingresar al menos un nombre');
     }
 }
+
+inputNombre.addEventListener('keypress', function (event) { //agrega un amigo al presionar enter
+    if (event.key === 'Enter') {
+        agregarAmigo();
+    }
+});
