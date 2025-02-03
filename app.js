@@ -27,6 +27,10 @@ function actualizarListaAmigos() {//actualiza la lista de amigos
 function sortearAmigo() {//sortea un amigo secreto
     if (nombres.length > 0) {//si hay al menos un nombre en el array nombres
         amigoSecreto = nombres[Math.floor(Math.random() * nombres.length)];//selecciona un nombre al azar
+        if (amigoSecreto == resultado.innerHTML) {//si el nombre seleccionado es igual al nombre que ya se mostro
+            sortearAmigo();//vuelve a sortear
+
+        }
         resultado.innerHTML = amigoSecreto;//muestra el nombre seleccionado
 
     } else {//si no hay nombres en el array nombres se alerta que debe ingresar al menos un nombre
