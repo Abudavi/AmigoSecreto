@@ -16,9 +16,20 @@ function agregarAmigo() {
 
     }
 }
+
 function actualizarListaAmigos() {//actualiza la lista de amigos
     listaAmigos.innerHTML = "";//limpia la lista de amigos
     nombres.forEach((nombre) => {
         listaAmigos.innerHTML += `<li>${nombre}</li>`;//agrega un li por cada nombre en el array nombres
     });
+}
+
+function sortearAmigo() {//sortea un amigo secreto
+    if (nombres.length > 0) {//si hay al menos un nombre en el array nombres
+        amigoSecreto = nombres[Math.floor(Math.random() * nombres.length)];//selecciona un nombre al azar
+        resultado.innerHTML = amigoSecreto;//muestra el nombre seleccionado
+
+    } else {//si no hay nombres en el array nombres se alerta que debe ingresar al menos un nombre
+        alert('Debes ingresar al menos un nombre');
+    }
 }
